@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="548.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.albertomarquez.empresaropa.PrimaryController">
+   <top>
+      <HBox prefHeight="42.0" prefWidth="736.0" spacing="7.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#OnActionButtonNuevo" prefHeight="33.0" prefWidth="58.0" text="Nuevo" />
+            <Button mnemonicParsing="false" onAction="#OnActionButtonEditar" prefHeight="33.0" prefWidth="58.0" text="Editar" />
+            <Button mnemonicParsing="false" onAction="#OnActionButtonSuprimir" prefHeight="35.0" prefWidth="64.0" text="Suprimir" />
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <TableView fx:id="tableViewRopa" prefHeight="326.0" prefWidth="696.0" BorderPane.alignment="CENTER_LEFT">
+        <columns>
+          <TableColumn fx:id="columnMarca" prefWidth="95.0" text="Marca" />
+          <TableColumn fx:id="columnTipo_Prenda" prefWidth="110.0" text="Tipo_Prenda" />
+            <TableColumn fx:id="columnColor" prefWidth="100.0" text="Color" />
+            <TableColumn fx:id="columnPrecio" prefWidth="107.0" text="Precio" />
+            <TableColumn fx:id="columnSegunda_Mano" prefWidth="149.00003051757812" text="Segunda_Mano" />
+            <TableColumn fx:id="columnFecha_Creacion" prefWidth="173.0" text="Fecha_Creacion" />
+        </columns>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+   <bottom>
+      <GridPane prefHeight="89.0" prefWidth="736.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="361.0" minWidth="10.0" prefWidth="209.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="676.0" minWidth="10.0" prefWidth="527.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="23.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre: " wrappingWidth="58.341796875" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets bottom="40.0" left="150.0" />
+               </GridPane.margin>
+            </Text>
+            <TextField prefHeight="63.0" prefWidth="368.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="45.0" right="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Apellidos: " wrappingWidth="59.978515625" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="40.0" left="149.0" />
+               </GridPane.margin>
+            </Text>
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="40.0" right="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#OnActionButtonGuardar" text="Guardar" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+   </bottom>
+</BorderPane>
